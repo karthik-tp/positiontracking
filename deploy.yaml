@@ -16,7 +16,7 @@
 
     - name: Create a suitable set of firewall rules
       ec2_group:
-         name: jenkins_server_security_groups
+         name: jenkins_server_security_groups_2
          description: Specific rules for a Jenkins Instance
          region: "{{ region }}"
          rules_egress:
@@ -38,7 +38,7 @@
     - name: Start up an EC2 Temporary Instance
       ec2:
         key_name: myKeyPair2
-        group: jenkins_server_security_groups
+        group: jenkins_server_security_groups_2
         instance_type: "{{ instance_type }}"
         image: "{{ base_image_name }}"
         wait: yes
@@ -79,7 +79,7 @@
 
     - name: All working so destroy the temporary instance
       ec2:
-        key_name: microservice-course-keypair
+        key_name: myKeyPair2
         group: jenkins_server_security_groups
         instance_type: notneeded
         image: notneeded
