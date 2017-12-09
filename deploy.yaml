@@ -77,7 +77,7 @@
 
   tasks:
 
-    - name: All working so destroy the temporary instance
+    - name: All working so destroy the temporary instances
       ec2:
         key_name: myKeyPair2
         group: jenkins_server_security_groups
