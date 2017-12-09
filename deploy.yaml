@@ -5,7 +5,7 @@
   vars:
      region: ap-southeast-2
      instance_type: t2.nano
-     base_image_name: ami-8536d6e7
+     base_image_name: ami-ff4ea59d
      number_of_instances_to_create: 1
 
   tasks:
